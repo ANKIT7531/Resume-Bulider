@@ -1,0 +1,189 @@
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io (2)/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io (2)/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io (2)/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io (2)/site.webmanifest">
+    <title>RESUME BULIDER</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"></script>
+</head>
+
+<body>
+    <div class="showcase-top">
+        <img src="/resumebuilder-logo.png" alt="" />
+    </div>
+    <h1>Select Your Sections</h1>
+    <div class="wrapper">
+        <div class="item">
+            <i class="fas fa-bars"></i>
+            <i class="fa-solid fa-circle-info"
+                title="In This Section U Can Add About Yourself and Your Skills Other Than ur Academic's"></i>
+            <span id="rName1" class="text">Profile Summary </span>
+            <!-- <input type="text" name="item" id="inp" value="Profile Summary" disabled> -->
+            <i class="edit" onclick="enableInput();"><a href="#" id="raw1"><i class="fa-solid fa-pen"
+                        style="color: #000000;" onClick="updateItems('raw1','rName1')"></i></a></i>
+            <i class="text-center" onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+
+            </i>
+        </div>
+        <div class="item">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-info"
+                title="In this Section U Can Add About Your Academic's and Your Cocurricular Achievements"></i>
+            <span id="rName2" class="text"> Academic and Cocurricular Achievement</span>
+            <i class="edit" onclick="enableInput();"><a href="#" id="raw2"><i class="fa-solid fa-pen" style="color: #000000;" onClick="updateItems('raw2','rName2')"></i></a></i>
+            <i class="text-center"  onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+            </i>
+        </div>
+        <div class="item">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-info"
+                title="In this Section U Can Add About All Your Summer Internship U Have Done"></i>
+            <span id="rName3" class="text">Summer Internship Experience</span>
+            <i class="edit" onclick="enableInput();"><a href="#" id="raw3"><i class="fa-solid fa-pen" style="color: #000000;" onClick="updateItems('raw3','rName3')"></i></a></i>
+            <i class="text-center"  onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+            </i>
+        </div>
+        <div class="item">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-info"
+                title="In this Section u Can Add About All The Work Experience You Have till date"></i>
+            <span id="rName4" class="text">Work Experience</span>
+            <i class="edit" onclick="enableInput();"><a href="#" id="raw4"><i class="fa-solid fa-pen" style="color: #000000;" onClick="updateItems('raw4','rName4')"></i></a></i>
+            <i class="text-center"  onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+            </i>
+        </div>
+        <div class="item">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-info" title="In this Section u Can Add All the Project You have done in Your college 
+                                         or for Any Internships"></i>
+            <span id="rName5" class="text">Projects</span>
+            <i class="edit" onclick="enableInput();"><a href="#" id="raw5"><i class="fa-solid fa-pen" style="color: #000000;" onClick="updateItems('raw5','rName5')"></i></a></i>
+            <i class="text-center"  onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+            </i>
+        </div>
+        <div class="item">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-info"
+                title="In this Section u can Add About All the certificate's You have collected till now in Your College or in Your Life"></i>
+            <span id="rName6" class="text">Certifications</span>
+             <i class="edit" onclick="enableInput();"><a href="#" id="raw6"><i class="fa-solid fa-pen"
+                        style="color: #000000;" onClick="updateItems('raw6','rName6')"></i></a></i>
+            <i class="text-center"  onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+            </i>
+        </div>
+        <div class="item">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-info"
+                title="In this Section u can Add ur Leadership Qualities and And ur Leadership Skill's "></i>
+            <span id="rName7" class="text">Leadership Positions</span>
+            <i class="edit" onclick="enableInput();"><a href="#" id="raw7"><i class="fa-solid fa-pen" style="color: #000000;" onClick="updateItems('raw7','rName7')"></i></a></i>
+            <i class="text-center"  onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+            </i>
+        </div>
+        <div class="item">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-info"
+                title="In This Section U can Add About Ur Extra Curricular Activity u Have Done In Ur School or In ur College"></i>
+            <span id="rName8" class="text"> Extracurricular</span>
+            <i class="edit" onclick="enableInput();"><a href="#" id="raw8"><i class="fa-solid fa-pen" style="color: #000000;" onClick="updateItems('raw8','rName8')"></i></a></i>
+            <i class="text-center"  onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+            </i>
+        </div>
+        <div class="item">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-circle-info"
+                title="In this Section U can Add About Ur Education Backgrounds And Ur Marks"></i>
+            <span id="rName9" class="text"> Education</span>
+            <i class="edit" onclick="enableInput();"><a href="#" id="raw9">
+                    <i class="fa-solid fa-pen" style="color: #000000;" onClick="updateItems('raw9','rName9')"></i></a></i>
+            <i class="text-center" onclick="enableInput();">
+                <div class="toggle-btn">
+                    <div class="inner-circle"></div>
+                </div>
+            </i>
+        </div>
+    </div>
+    <button disabled id="submit" class="center btn" type="submit">Save And Next</button>
+    <script>
+
+        function enableInput(e) {
+            const ipn = document.getElementById("submit");
+            ipn.disabled = false;
+            const inpp = document.getElementById("inp");
+            if (inpp.disabled == false) {
+                inpp.disabled = true;
+            } else {
+                inpp.disabled = false;
+            }
+            // ipn.removeAttribute("disabled");
+        }
+
+
+        const dragArea = document.querySelector(".wrapper");
+        new Sortable(dragArea, {
+            animation: 350
+        });
+
+
+
+        type = "text/javascript" > $(document).ready(function () {
+            $('.toggle-btn').click(function () {
+                $(this).toggleClass('active').siblings().removeClass('active');
+            });
+        });
+        function updateItems(id1, id2) {
+            element1 = document.getElementById(id1);
+            element2 = document.getElementById(id2);
+            var inputPreText=$.trim($("#"+id2).text());
+
+            var inputId = id2 + "input";
+            element1.innerHTML = '<button type="button" onClick="onSave(' + id1 + ',' + id2 + ',' + inputId + ')">Save</button>';
+            element2.innerHTML='<input style="width:300px;" type="text" id='+inputId+' value="'+inputPreText+'"></input>';
+        }
+        function onSave(id1, id2, inputId) {
+            var x = $(inputId).val();
+            var element1 = document.getElementById(id1);
+            var element2 = document.getElementById(id2);
+            id2.innerHTML = x;
+            id1.innerHTML = '<i class="fa-solid fa-pen"  onClick="updateItems(raw1,rName1)"></i>';
+        }
+
+    </script>
+</body>
+
+</html>
